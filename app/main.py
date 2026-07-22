@@ -14,27 +14,15 @@ app = FastAPI(
     version='1.0.0'
 )
 
-# =============================================================================
-# Root Endpoint
-# Returns basic information about the API.
-# =============================================================================
-@app.get('/')
-def root():
-    """
-    Root endpoint to verify that the API is running.
-    """
-    return {
-        "message": "Welcome to the Bangladeshi Taka Note Detection API",
-        "status": "running",
-        "version": "1.0.0"
-    }
-
 
 # =============================================================================
 # Register API Routers
 # =============================================================================
 # Import required libraries
+from app.api.root import router as root_router 
 from app.api.health import router as health_router 
 
+
 # Register routers
+app.include_router(root_router)
 app.include_router(health_router) 
