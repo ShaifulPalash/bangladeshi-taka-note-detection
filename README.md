@@ -11,8 +11,8 @@ A FastAPI application that uses a YOLO model to detect Bangladeshi Taka notes fr
 - ✅ Virtual environment configured
 - ✅ Project dependencies installed
 - ✅ FastAPI application initialized
+- ✅ Root endpoint (`/`) implemented
 - ✅ Interactive API documentation (Swagger UI & ReDoc)
-- ⏳ Root endpoint (`/`) - In Progress
 - ⏳ Health check endpoint (`/health`) - In Progress
 - ⏳ Prediction API - Planned
 
@@ -59,7 +59,15 @@ uvicorn app.main:app --reload
 Once the server is running, open your browser and visit:
 
 - API Base URL: http://127.0.0.1:8000
+- Root Endpoint: http://127.0.0.1:8000/
 - Swagger UI: http://127.0.0.1:8000/docs
 - ReDoc: http://127.0.0.1:8000/redoc
 
-> **Note:** At this stage, the FastAPI application has been initialized successfully. API endpoints will be added in the following development steps.
+> **Note:** The root endpoint (`/`) is available and returns basic information about the API. Additional endpoints will be implemented in the following development steps.
+
+
+## Available Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/` | Returns basic information about the API. | 
