@@ -28,3 +28,13 @@ def root():
         "status": "running",
         "version": "1.0.0"
     }
+
+
+# =============================================================================
+# Register API Routers
+# =============================================================================
+# Import required libraries
+from app.api.health import router as health_router 
+
+# Register routers
+app.include_router(health_router) 

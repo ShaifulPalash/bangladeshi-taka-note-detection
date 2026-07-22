@@ -12,8 +12,8 @@ A FastAPI application that uses a YOLO model to detect Bangladeshi Taka notes fr
 - ✅ Project dependencies installed
 - ✅ FastAPI application initialized
 - ✅ Root endpoint (`/`) implemented
+- ✅ Health check endpoint (`/health`) implemented
 - ✅ Interactive API documentation (Swagger UI & ReDoc)
-- ⏳ Health check endpoint (`/health`) - In Progress
 - ⏳ Prediction API - Planned
 
 
@@ -60,10 +60,11 @@ Once the server is running, open your browser and visit:
 
 - API Base URL: http://127.0.0.1:8000
 - Root Endpoint: http://127.0.0.1:8000/
+- Health Endpoint: http://127.0.0.1:8000/health
 - Swagger UI: http://127.0.0.1:8000/docs
 - ReDoc: http://127.0.0.1:8000/redoc
 
-> **Note:** The root endpoint (`/`) is available and returns basic information about the API. Additional endpoints will be implemented in the following development steps.
+> **Note:** The application is currently running with the root (`/`) and health (`/health`) endpoints. Additional endpoints will be implemented in the following development steps.
 
 
 ## Available Endpoints
@@ -71,3 +72,4 @@ Once the server is running, open your browser and visit:
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/` | Returns basic information about the API. | 
+| GET | `/health` | Returns the application's health status. |
